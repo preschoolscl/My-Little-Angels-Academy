@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Little Angels Academy</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="icon" href="logo.jpg">
+</head>
+
+<body class="bg-pink-50 text-gray-800 flex flex-col min-h-screen">
+<!-- Responsive Navbar -->
+<header class="bg-white shadow-md fixed w-full top-0 z-50">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+    <!-- Logo -->
+    <div class="flex items-center space-x-2">
+      <img src="logo.jpg" alt="My Little Angels Logo" class="w-10 h-10 rounded-full">
+      <h1 class="text-lg font-bold text-pink-600">My Little Angels</h1>
+    </div>
+
+    <!-- Desktop Menu -->
+    <nav class="hidden md:flex space-x-8 text-gray-700 font-semibold">
+      <a href="#hero" class="hover:text-pink-600">Home</a>      
+      <a href="gallery.html" class="hover:text-pink-600">Gallery</a>
+      <a href="#apply" class="hover:text-pink-600">Apply</a>
+      <a href="#footer" class="hover:text-pink-600">Contact</a>
+    </nav>
+
+    <!-- Hamburger Button -->
+    <button id="menu-btn" class="block md:hidden text-pink-600 focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none"
+           viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+</header>
+
+<!-- Overlay Background -->
+<div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-40 transition-opacity"></div>
+
+<!-- Slide-In Mobile Menu -->
+<nav id="mobile-menu"
+     class="fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out z-50 md:hidden">
+  <div class="p-6 flex flex-col h-full">
+    <button id="close-btn" class="self-end text-pink-600 mb-6 focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none"
+           viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+
+    <nav class="flex flex-col space-y-4 text-gray-700 font-semibold">
+      <a href="#hero" class="hover:text-pink-600">Home</a>      
+      <a href="#apply" class="hover:text-pink-600">Apply</a>
+      <a href="gallery.html" class="hover:text-pink-600">Gallery</a>
+      <a href="#footer" class="hover:text-pink-600">Contact</a>
+    </nav>
+
+    <div class="mt-auto text-center text-sm text-gray-400">
+      © 2026 My Little Angels Academy
+    </div>
+  </div>
+</nav>
+
+<!-- Spacer to prevent content hiding behind header -->
+<div class="mt-24"></div>
+
+
+<section 
+  class="relative flex flex-col justify-center items-center text-center 
+         min-h-screen text-white px-6 bg-cover bg-center bg-no-repeat" 
+  style="background-image: url('gallery/44.jpeg');"
+>
+
+  <!-- Content -->
+  <div class="relative z-10">
+    <h2 class="text-4xl md:text-5xl font-extrabold mb-4 drop-shadow-lg">
+      Nurturing Little Angels with Love & Care
+    </h2>
+    <p class="max-w-2xl mx-auto text-lg mb-8 drop-shadow-md">
+      We provide a fun, safe, and loving environment for children to learn, laugh, and grow every day!
+    </p>
+    <a href="#apply" 
+       class="bg-white text-pink-600 font-bold py-3 px-8 rounded-full hover:bg-yellow-100 transition">
+       Apply Now
+    </a>
+  </div>
+</section>
+
+
+  <!-- Services Section -->
+  <section id="services" class="py-16 px-6 md:px-12 bg-white">
+    <h2 class="text-3xl font-bold text-center text-pink-600 mb-12">Our Services</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-pink-100 p-6 rounded-2xl shadow hover:shadow-xl transition text-center">
+        <i data-lucide="baby" class="mx-auto w-10 h-10 mb-4 text-pink-600"></i>
+        <h3 class="text-xl font-bold mb-2">Day Care</h3>
+        <p>Safe and loving day care for children aged 6 months to 6 years.</p>
+      </div>
+      <div class="bg-yellow-100 p-6 rounded-2xl shadow hover:shadow-xl transition text-center">
+        <i data-lucide="book" class="mx-auto w-10 h-10 mb-4 text-yellow-600"></i>
+        <h3 class="text-xl font-bold mb-2">Early Learning</h3>
+        <p>Interactive lessons that develop curiosity, creativity, and confidence.</p>
+      </div>
+      <div class="bg-green-100 p-6 rounded-2xl shadow hover:shadow-xl transition text-center">
+        <i data-lucide="apple" class="mx-auto w-10 h-10 mb-4 text-green-600"></i>
+        <h3 class="text-xl font-bold mb-2">Healthy Meals</h3>
+        <p>Nutritious meals designed to keep your little ones strong and happy!</p>
+      </div>
+    </div>
+  </section>
+
+<!-- Precious Angels Admission Form -->
+<section id="apply" class="py-16 px-6 bg-pink-50">
+  <!-- Header Section -->
+  <div class="max-w-3xl mx-auto bg-white p-8 rounded-2xl shadow-md mb-10">
+    <div class="flex flex-col items-center text-center">
+      <img src="logo.jpg" alt="Precious Angels Logo" class="w-24 h-24 mb-3">
+      <h1 class="text-2xl font-bold text-pink-600">MY LITTLE ANGELS ACADEMY</h1>
+      <p class="text-gray-700 text-sm mt-1">
+        8 Oriole Place Tedstoneville, Germiston, 1432
+      </p>
+      <p class="text-gray-700 text-sm">
+        <strong>Tel/Cell:</strong>
+      </p>
+      <p class="text-gray-700 text-sm">
+        <strong>Email:</strong>
+      </p>
+    </div>
+  </div>
+
+  <!-- Admission Form -->
+  <div class="max-w-3xl mx-auto bg-white p-8 rounded-2xl shadow-md">
+    <h2 class="text-2xl font-bold text-center text-pink-600 mb-8">
+      Admission Form 2026
+    </h2>
+
+    <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+      <input type="hidden" name="access_key" value="d5029de4-c130-4279-a4fd-ebe7bb5fcd38">
+      <input type="hidden" name="redirect" value="thank-you.html">
+
+      <!-- Child Information -->
+      <h3 class="text-xl font-semibold text-pink-500 border-b pb-2">Child Information</h3>
+      <div>
+        <label class="block font-semibold mb-1">Child's Name & Surname</label>
+        <input type="text" name="child_name" class="w-full border rounded-lg p-2" placeholder="Enter child's full name" required>
+      </div>
+
+      <div>
+        <label class="block font-semibold mb-1">Home Address</label>
+        <input type="text" name="child_address" class="w-full border rounded-lg p-2" placeholder="Enter home address" required>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-4">
+        <div>
+          <label class="block font-semibold mb-1">Date of Birth</label>
+          <input type="date" name="child_dob" class="w-full border rounded-lg p-2" required>
+        </div>
+        <div>
+          <label class="block font-semibold mb-1">Allergies</label>
+          <input type="text" name="child_allergies" class="w-full border rounded-lg p-2" placeholder="Specify if any">
+        </div>
+      </div>
+
+      <div>
+        <label class="block font-semibold mb-1">Home Language</label>
+        <input type="text" name="child_language" class="w-full border rounded-lg p-2" placeholder="e.g. English, isiZulu" required>
+      </div>
+
+      <!-- Parent/Guardian -->
+      <h3 class="text-xl font-semibold text-pink-500 border-b pb-2">Parent/Guardian Information</h3>
+      <div>
+        <label class="block font-semibold mb-1">Name of Parent/Guardian</label>
+        <input type="text" name="guardian_name" class="w-full border rounded-lg p-2" required>
+      </div>
+      <div>
+        <label class="block font-semibold mb-1">Home Address</label>
+        <input type="text" name="guardian_address" class="w-full border rounded-lg p-2" required>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-4">
+        <div>
+          <label class="block font-semibold mb-1">Relationship to Child</label>
+          <input type="text" name="guardian_relationship" class="w-full border rounded-lg p-2" placeholder="e.g. Mother, Father, Guardian">
+        </div>
+        <div>
+          <label class="block font-semibold mb-1">Tel/Cell</label>
+          <input type="tel" name="guardian_phone" class="w-full border rounded-lg p-2" placeholder="071 123 4567">
+        </div>
+      </div>
+
+      <div>
+        <label class="block font-semibold mb-1">Person(s) Responsible for Fetching the Child</label>
+        <input type="text" name="fetch_person" class="w-full border rounded-lg p-2" placeholder="Name of authorized person(s)">
+      </div>
+
+      <!-- Emergency Contact -->
+      <h3 class="text-xl font-semibold text-pink-500 border-b pb-2">Emergency Contact</h3>
+      <div>
+        <label class="block font-semibold mb-1">Name of Contact Person</label>
+        <input type="text" name="emergency_name" class="w-full border rounded-lg p-2" required>
+      </div>
+      <div>
+        <label class="block font-semibold mb-1">Home Address</label>
+        <input type="text" name="emergency_address" class="w-full border rounded-lg p-2" required>
+      </div>
+      <div class="grid md:grid-cols-2 gap-4">
+        <div>
+          <label class="block font-semibold mb-1">Relationship</label>
+          <input type="text" name="emergency_relationship" class="w-full border rounded-lg p-2">
+        </div>
+        <div>
+          <label class="block font-semibold mb-1">Tel/Cell</label>
+          <input type="tel" name="emergency_phone" class="w-full border rounded-lg p-2" placeholder="071 123 4567">
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-4">
+        <div>
+          <label class="block font-semibold mb-1">Name of Doctor</label>
+          <input type="text" name="doctor_name" class="w-full border rounded-lg p-2">
+        </div>
+        <div>
+          <label class="block font-semibold mb-1">Doctor's Tel</label>
+          <input type="tel" name="doctor_phone" class="w-full border rounded-lg p-2" placeholder="012 345 6789">
+        </div>
+      </div>
+
+      <p class="text-sm text-gray-500 mt-2 italic">
+        *Please attach a copy of the Birth Certificate and Clinic Card of the child.
+      </p>
+
+      <!-- Rules & Regulations Collapsible -->
+      <details class="mt-6 bg-pink-50 border border-pink-200 rounded-lg p-4">
+        <summary class="font-bold text-pink-600 cursor-pointer">View Rules and Regulations</summary>
+        <div class="mt-3 text-gray-700 space-y-2 text-sm leading-relaxed">
+          <p><strong>School Hours:</strong> 6:00am – 4:00pm, Monday–Friday</p>
+          <ul class="list-disc ml-5">
+            <li>Children 3 months–2 years: R550/month</li>
+            <li>Children 2–6 years: R550/month</li>
+            <li>Registration fee: R250 (once-off)</li>
+            <li>Late pickup after 16:00 incurs R60 penalty.</li>
+            <li>Fees due 1st of every month; after the 7th incurs R100 fine.</li>
+            <li>Fees apply even during holidays (Centre does not close).</li>
+            <li>Uniform required Mon–Thu and for school trips.</li>
+            <li>Parents must attend meetings and school events.</li>
+            <li>No sick child (fever/contagious) allowed at school.</li>
+            <li>Two-month notice required before withdrawal.</li>
+            <li>December fees to be paid by July.</li>
+            <li>School transport is available at an additional cost</li>
+          </ul>
+
+          <p class="mt-3 font-semibold">Banking Details:</p>
+          <p>Acc Name: My Little Angels Academy<br>
+          Bank: FNB<br>
+          Acc No: <br>
+          Ref: </p>
+
+          <p class="italic mt-2">*This contract is binding for the whole year.</p>
+        </div>
+      </details>
+
+      <!-- Agreement -->
+      <div class="mt-4">
+        <label class="flex items-start space-x-2">
+          <input type="checkbox" name="agreement" required>
+          <span class="text-sm text-gray-700">I, the parent/guardian, agree to the Rules and Regulations of Precious Angels Day Care Centre.</span>
+        </label>
+      </div>
+
+      <!-- Submit -->
+      <button type="submit" class="bg-pink-600 text-white font-bold py-3 px-6 rounded-full hover:bg-pink-700 transition w-full">
+        Submit Admission Form
+      </button>
+    </form>
+  </div>
+</section>
+
+
+
+  <!-- Footer -->
+  <footer class="bg-pink-700 text-white py-10 mt-auto">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left px-6 gap-10">
+      
+      <div>
+        <img src="logo.jpg" alt="Logo" class="w-20 mx-auto md:mx-0 mb-4 rounded-full border-2 border-white">
+        <h3 class="text-lg font-bold mb-2">My Little Angels Academy</h3>
+        <p>8 Oriole Place Tedstoneville, Germiston</p>
+        <p>NPO Number 315-729</p>
+        <p>Tel:  </p>
+        <p>Email: </p>
+      </div>
+
+      <div>
+        <h3 class="text-lg font-bold mb-3">Follow Us</h3>
+        <div class="flex flex-col items-center md:items-start space-y-3">
+          <a href="#" class="flex items-center gap-2 hover:text-yellow-300"><i data-lucide="facebook"></i> Facebook</a>
+          <a href="#" class="flex items-center gap-2 hover:text-yellow-300"><i data-lucide="instagram"></i> Instagram</a>
+          <a href="#" class="flex items-center gap-2 hover:text-yellow-300"><i data-lucide="twitter"></i> Twitter</a>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="text-lg font-bold mb-3">Find Us</h3>
+        <iframe class="w-64 h-48 rounded-lg" src="https://www.google.com/maps?q=Katlehong+Germiston&output=embed"></iframe>
+      </div>
+    </div>
+    <p class="text-center mt-8 text-sm">© 2026 My Little Angels Academy. All rights reserved.</p>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/27713169900" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition">
+    <i data-lucide="message-circle" class="w-6 h-6"></i>
+  </a>
+<!-- JavaScript -->
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const closeBtn = document.getElementById('close-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const overlay = document.getElementById('overlay');
+
+  // Open menu
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.remove('translate-x-full');
+    overlay.classList.remove('hidden');
+  });
+
+  // Close menu
+  const closeMenu = () => {
+    mobileMenu.classList.add('translate-x-full');
+    overlay.classList.add('hidden');
+  };
+
+  closeBtn.addEventListener('click', closeMenu);
+  overlay.addEventListener('click', closeMenu);
+</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox.min.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

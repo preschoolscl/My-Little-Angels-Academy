@@ -144,7 +144,7 @@ ad>
   <!-- Header Section -->
   <div class="max-w-3xl mx-auto bg-white p-8 rounded-2xl shadow-md mb-10">
     <div class="flex flex-col items-center text-center">
-      <img src="logo.jpg" alt="Precious Angels Logo" class="w-24 h-24 mb-3">
+      <img src="logo.jpg" alt="Little Angels Logo" class="w-24 h-24 mb-3">
       <h1 class="text-2xl font-bold text-pink-600">MY LITTLE ANGELS ACADEMY</h1>
       <p class="text-gray-700 text-sm mt-1">
         8 Oriole Place Tedstoneville, Germiston, 1432
@@ -165,8 +165,16 @@ ad>
     </h2>
 
     <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+
+      <!-- Web3Forms -->
       <input type="hidden" name="access_key" value="d5029de4-c130-4279-a4fd-ebe7bb5fcd38">
       <input type="hidden" name="redirect" value="thank-you.html">
+
+      <!-- Formly Email -->
+      <input type="hidden" name="formly_email" value="887488ee8c3c4cc592eaff204f080fa3">
+
+      <!-- Email Subject -->
+      <input type="hidden" name="subject" value="New Admission Form Submission – My Little Angels Academy">
 
       <!-- Child Information -->
       <h3 class="text-xl font-semibold text-pink-500 border-b pb-2">Child Information</h3>
@@ -202,6 +210,7 @@ ad>
         <label class="block font-semibold mb-1">Name of Parent/Guardian</label>
         <input type="text" name="guardian_name" class="w-full border rounded-lg p-2" required>
       </div>
+
       <div>
         <label class="block font-semibold mb-1">Home Address</label>
         <input type="text" name="guardian_address" class="w-full border rounded-lg p-2" required>
@@ -229,10 +238,12 @@ ad>
         <label class="block font-semibold mb-1">Name of Contact Person</label>
         <input type="text" name="emergency_name" class="w-full border rounded-lg p-2" required>
       </div>
+
       <div>
         <label class="block font-semibold mb-1">Home Address</label>
         <input type="text" name="emergency_address" class="w-full border rounded-lg p-2" required>
       </div>
+
       <div class="grid md:grid-cols-2 gap-4">
         <div>
           <label class="block font-semibold mb-1">Relationship</label>
@@ -259,41 +270,33 @@ ad>
         *Please attach a copy of the Birth Certificate and Clinic Card of the child.
       </p>
 
-      <!-- Rules & Regulations Collapsible -->
+      <!-- Rules & Regulations -->
       <details class="mt-6 bg-pink-50 border border-pink-200 rounded-lg p-4">
         <summary class="font-bold text-pink-600 cursor-pointer">View Rules and Regulations</summary>
         <div class="mt-3 text-gray-700 space-y-2 text-sm leading-relaxed">
-           <p class="text-gray-700 mb-4">
-    <strong>School Hours:</strong> 6:00am – 6:00pm, Monday–Friday
-  </p>
+          <p><strong>School Hours:</strong> 6:00am – 6:00pm, Monday–Friday</p>
 
-  <ul class="list-disc ml-5 text-gray-700 space-y-2">
-    <li><strong>Registration Fee:</strong> R500 (once-off)</li>
-    <li>Monthly school fees differ depending on the child’s age group (please enquire for your child’s category).</li>
-    <li><strong>After 6:00pm:</strong> R100 per hour late pickup fee applies.</li>
-    <li>Fees are due on the <strong>1st of every month</strong>; payments made after the 7th incur a <strong>R100 late penalty</strong>.</li>
-    <li>Fees remain payable during school holidays (the Centre remains open).</li>
-    <li><strong>Language of instruction:</strong> English only.</li>
-    <li>Uniforms are required Monday–Thursday and for all school outings.</li>
-    <li>Parents must attend all scheduled meetings and school events.</li>
-    <li>No sick or contagious children (fever, flu, etc.) are allowed at school.</li>
-    <li><strong>Two months’ notice</strong> is required before withdrawal.</li>
-    <li>December fees must be paid by <strong>July</strong>.</li>
-    <li>
-      <strong>Transport Services:</strong> Available at additional cost in the following areas:
-      <br>
-      <span class="block ml-5 text-gray-600">
-        Germiston, Dinwiddie, Elsburg, Tedstoneville, Extension 9, Dukathole, Delmore, and Delmore Gardens.
-      </span>
-      <em>Prices differ depending on the area.</em>
-    </li>
-  </ul>
+          <ul class="list-disc ml-5 space-y-2">
+            <li><strong>Registration Fee:</strong> R500 (once-off)</li>
+            <li>Monthly school fees differ depending on the child’s age group.</li>
+            <li><strong>After 6:00pm:</strong> R100 per hour late pickup fee.</li>
+            <li>Fees due on the <strong>1st</strong>; after the 7th incur a <strong>R100 penalty</strong>.</li>
+            <li>Fees payable during school holidays.</li>
+            <li><strong>Language of instruction:</strong> English only.</li>
+            <li>Uniforms required Monday–Thursday.</li>
+            <li>No sick or contagious children allowed.</li>
+            <li><strong>Two months’ notice</strong> before withdrawal.</li>
+            <li>December fees must be paid by <strong>July</strong>.</li>
+            <li><strong>Transport Services:</strong> Available at additional cost.</li>
+          </ul>
 
           <p class="mt-3 font-semibold">Banking Details:</p>
-          <p>Acc Name: My Little Angels Academy<br>
-          Bank: FNB<br>
-          Acc No: <br>
-          Ref: </p>
+          <p>
+            Acc Name: My Little Angels Academy<br>
+            Bank: FNB<br>
+            Acc No:<br>
+            Ref:
+          </p>
 
           <p class="italic mt-2">*This contract is binding for the whole year.</p>
         </div>
@@ -303,7 +306,9 @@ ad>
       <div class="mt-4">
         <label class="flex items-start space-x-2">
           <input type="checkbox" name="agreement" required>
-          <span class="text-sm text-gray-700">I, the parent/guardian, agree to the Rules and Regulations of Precious Angels Day Care Centre.</span>
+          <span class="text-sm text-gray-700">
+            I, the parent/guardian, agree to the Rules and Regulations of Precious Angels Day Care Centre.
+          </span>
         </label>
       </div>
 
@@ -311,9 +316,11 @@ ad>
       <button type="submit" class="bg-pink-600 text-white font-bold py-3 px-6 rounded-full hover:bg-pink-700 transition w-full">
         Submit Admission Form
       </button>
+
     </form>
   </div>
 </section>
+
 
 
 
@@ -385,6 +392,7 @@ ad>
   <script>lucide.createIcons();</script>
 </body>
 </html>
+
 
 
 

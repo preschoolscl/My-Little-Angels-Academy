@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>School Transport Services | My Little Angels Academy</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Safe and reliable school transport services in Germiston. Serving multiple schools and areas including Dinwiddie, Elsburg, Tedstoneville, Dukathole and more.">
+
+  <!-- Tailwind -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Favicon -->
+  <link rel="icon" href="logo.jpg">
+</head>
+
+<body class="bg-pink-50 text-gray-800">
+
+<!-- NAVBAR -->
+<header class="bg-white shadow fixed w-full z-50">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+    <div class="flex items-center space-x-2">
+      <img src="logo.jpg" class="w-10 h-10 rounded-full">
+      <h1 class="text-lg font-bold text-pink-600">My Little Angels Academy</h1>
+    </div>
+
+    <nav class="hidden md:flex space-x-8 font-semibold text-gray-700">
+      <a href="index.html" class="hover:text-pink-600">Home</a>
+      <a href="gallery.html" class="hover:text-pink-600">Gallery</a>
+      <a href="transport.html" class="text-pink-600 font-bold">Transport</a>
+      <a href="index.html#apply" class="hover:text-pink-600">Apply</a>
+      <a href="index.html#footer" class="hover:text-pink-600">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="mt-24"></div>
+
+<!-- HERO -->
+<section class="relative min-h-[60vh] flex items-center justify-center text-center text-white bg-cover bg-center"
+  style="background-image: url('gallery/44.jpeg');">
+  <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+  <div class="relative z-10 px-6">
+    <h1 class="text-4xl md:text-5xl font-extrabold text-yellow-300">
+      School Transport Services
+    </h1>
+    <p class="mt-4 text-lg max-w-2xl mx-auto">
+      Safe, reliable transport for learners from multiple schools in Germiston and surrounding areas
+    </p>
+  </div>
+</section>
+
+<!-- INFO -->
+<section class="py-16 px-6 bg-white">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl font-bold text-pink-600 mb-4">
+      We Transport Learners From Other Schools
+    </h2>
+    <p class="text-gray-700 text-lg">
+      My Little Angels Academy provides school transport services to children attending
+      <strong>various schools</strong>, not only our academy.
+    </p>
+  </div>
+</section>
+
+<!-- AREAS & SCHOOLS -->
+<section class="py-16 px-6 bg-pink-50">
+  <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
+
+    <!-- AREAS -->
+    <div class="bg-white p-6 rounded-2xl shadow">
+      <h3 class="text-2xl font-bold text-pink-600 mb-4 flex items-center gap-2">
+        <i data-lucide="map-pin"></i> Areas We Operate In
+      </h3>
+      <ul class="space-y-2 text-gray-700 list-disc list-inside">
+        <li>Dinwiddie</li>
+        <li>Germiston</li>
+        <li>Elsburg</li>
+        <li>Tedstoneville</li>
+        <li>Extension 9</li>
+        <li>Dukathole</li>
+        <li>Delmore Gardens</li>
+        <li>Lambton</li>
+        <li>Parkhill</li>
+        <li>Gardens</li>
+      </ul>
+    </div>
+
+    <!-- SCHOOLS -->
+    <div class="bg-white p-6 rounded-2xl shadow">
+      <h3 class="text-2xl font-bold text-pink-600 mb-4 flex items-center gap-2">
+        <i data-lucide="school"></i> Schools We Serve
+      </h3>
+      <ul class="space-y-2 text-gray-700 list-disc list-inside">
+        <li>Dukathole Primary School</li>
+        <li>Galway Primary School</li>
+        <li>Germiston South Primary</li>
+        <li>Germiston Laerskool</li>
+        <li>Delville Primary School</li>
+        <li>Germiston High School</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- FEES -->
+<section class="py-16 px-6 bg-white">
+  <div class="max-w-3xl mx-auto bg-pink-50 p-8 rounded-2xl shadow">
+    <h2 class="text-3xl font-bold text-center text-pink-600 mb-6">
+      Transport Fees
+    </h2>
+
+    <ul class="space-y-3 text-lg text-gray-700">
+      <li>🚌 <strong>Morning Only:</strong> R400 / month</li>
+      <li>🚌 <strong>Afternoon Only:</strong> R400 / month</li>
+      <li>🚌 <strong>Morning & Afternoon:</strong> R700 / month</li>
+      <li class="text-red-600 font-semibold mt-4">
+        Fees payable monthly in advance
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- TRANSPORT FORM -->
+<section class="py-16 px-6 bg-pink-50">
+  <div class="max-w-3xl mx-auto bg-white p-8 rounded-2xl shadow">
+
+    <h2 class="text-3xl font-bold text-center text-pink-600 mb-6">
+      Transport Application Form
+    </h2>
+
+    <form
+      id="transportForm"
+      action="https://api.web3forms.com/submit"
+      method="POST"
+      class="space-y-5"
+      onsubmit="sendTransport(event)"
+    >
+
+      <input type="hidden" name="access_key" value="b2ef6631-7eb7-4698-be55-bddc6bf6b36d">
+      <input type="hidden" name="subject" value="New Transport Application – My Little Angels Academy">
+
+      <input type="text" name="child_name" required placeholder="Child’s Full Name"
+        class="w-full p-3 border rounded-lg">
+
+      <input type="text" name="school_name" required placeholder="School Name"
+        class="w-full p-3 border rounded-lg">
+
+      <input type="text" name="parent_name" required placeholder="Parent / Guardian Name"
+        class="w-full p-3 border rounded-lg">
+
+      <input type="tel" name="contact_number" required placeholder="Contact Number"
+        class="w-full p-3 border rounded-lg">
+
+      <textarea name="pickup_address" required placeholder="Pick-up Address"
+        class="w-full p-3 border rounded-lg"></textarea>
+
+      <select name="transport_type" required class="w-full p-3 border rounded-lg">
+        <option value="">Select Transport Option</option>
+        <option>Morning Only</option>
+        <option>Afternoon Only</option>
+        <option>Morning & Afternoon</option>
+      </select>
+
+      <button
+        type="submit"
+        class="w-full bg-pink-600 text-white py-3 rounded-full font-bold hover:bg-pink-700 transition">
+        Submit Transport Application
+      </button>
+    </form>
+
+    <div id="successMsg" class="hidden mt-6 text-center text-green-600 font-semibold">
+      ✅ Application sent successfully!
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-pink-700 text-white py-8 text-center">
+  <p class="font-semibold">© 2026 My Little Angels Academy</p>
+  <p>8 Oriole Place, Tedstoneville, Germiston</p>
+</footer>
+
+<!-- SCRIPTS -->
+<script>
+function sendTransport(e) {
+  e.preventDefault();
+  const form = e.target;
+  const data = new FormData(form);
+
+  const msg = `
+New Transport Application
+Child: ${data.get("child_name")}
+School: ${data.get("school_name")}
+Parent: ${data.get("parent_name")}
+Phone: ${data.get("contact_number")}
+Option: ${data.get("transport_type")}
+Pickup: ${data.get("pickup_address")}
+  `;
+
+  window.open(
+    "https://wa.me/27672486822?text=" + encodeURIComponent(msg),
+    "_blank"
+  );
+
+  fetch(form.action, { method: "POST", body: data }).then(() => {
+    document.getElementById("successMsg").classList.remove("hidden");
+    form.reset();
+  });
+}
+
+lucide.createIcons();
+</script>
+
+</body>
+</html>
